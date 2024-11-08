@@ -1,0 +1,79 @@
+:root {
+  --primary-color: #4CAF50; /* Changed to a more soothing green */
+  --secondary-color: #2C3E50; /* Darker shade for better contrast */
+  --background-color: #ECF0F1; /* Light grey for a softer background */
+  --text-color: #2C3E50; /* Darker text color for better readability */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: url('https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.9; /* Slightly increased opacity for better visibility */
+}
+
+.form {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9); /* Increased opacity for better readability */
+  border-radius: 1rem;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  min-width: 320px;
+  position: relative;
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.form .ant-form-item-label > label {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.form-content {
+  height: 2.5rem;
+  padding: 0.5rem;
+  color: var(--secondary-color);
+  background: var(--background-color);
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-content:focus-visible {
+  outline: none;
+  background: #D5DBDB; /* Softer focus background */
+  box-shadow: 0px 0px 3px 3px #BDC3C7; /* Softer focus shadow */
+}
+
+.form-content:hover {
+  background: #D5DBDB; /* Softer hover background */
+}
+
+::placeholder {
+  color: #95A5A6; /* Softer placeholder color */
+  font-weight: 400;
+}
+
+.form button {
+  cursor: pointer;
+  height: 2.5rem;
+  padding: 0 1rem;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: linear-gradient(135deg, #1D976C, #93F9B9); /* Softer gradient */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form button:hover {
+  background: #1D976C; /* Softer hover background */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Softer hover shadow */
+}

@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #FFA500;
+  --secondary-color: #4b2525;
+  --background-color: #f0f0f0;
+  --text-color: #333333; /* Ensure text color is dark */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heroBox {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 10px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(167, 163, 163, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.heroBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.boxIcons {
+  color: #f43f08;
+  margin-right: 15px;
+}
+
+.image-section {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.image-section img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.05);
+}
+
+.login-form-container {
+  margin: 20px auto;
+  max-width: 450px;
+}
+
+.hover\:bg-gradient-to-r:hover {
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:text-white:hover {
+  color: var(--primary-color);
+}

@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #3498db; /* Blue */
+  --secondary-color: #2ecc71; /* Green */
+  --background-color: #f5f5f5; /* Light Gray */
+  --text-color: #2c3e50; /* Dark Blue */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --accent-color: #e74c3c; /* Red */
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.DesignHolder, .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.site-logo {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.site-logo h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-shadow: 1px 1px var(--shadow-medium);
+}
+
+.Banner_sec, .About_sec, .Services_sec, .Pricing_sec, .Footer_sec {
+  padding: 50px 30px;
+  margin: 50px auto;
+  background: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--shadow-light);
+  text-align: center;
+}
+
+.Banner_sec {
+  background: linear-gradient(135deg, #e74c3c, #c0392b); /* Gradient Red */
+  color: var(--background-color); /* Ensure text is visible */
+}
+
+.Banner_sec .leftside,
+.Banner_sec .rightside {
+  flex: 1;
+  text-align: center;
+}
+
+.Banner_sec h3 {
+  font-size: 2.25rem;
+  margin-bottom: 15px;
+}
+
+.Banner_sec p {
+  margin: 10px 0;
+}
+
+.TabImage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  max-width: 350px;
+  margin: 15px;
+}
+
+.about-img img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow-medium);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px var(--shadow-medium);
+}
+
+.Tabside ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Tabside .tabLink {
+  padding: 15px 20px;
+  color: var(--secondary-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.Tabside .tabLink.activeLink {
+  background: var(--accent-color); /* Red */
+  border-color: var(--primary-color);
+}
+
+.Description h3,
+.Services_sec h1,
+.Pricing_sec h2 {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.Line {
+  width: 60px;
+  height: 5px;
+  background: var(--primary-color);
+  margin: 25px auto;
+}
+
+.image-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 30px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.image {
+  flex: 0 0 auto;
+  width: 350px;
+  margin-right: 25px;
+  scroll-snap-align: start;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.1);
+}
+
+.Pricing_sec form {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.Pricing_sec input,
+.Pricing_sec textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.Pricing_sec .submit_btn {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Pricing_sec .submit_btn:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05); /* Added scale effect for better visual appeal */
+}
+
+.Footer_sec {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.Footerinner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footerside h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.footerside p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .Banner_sec,
+  .About_sec,
+  .Services_sec,
+  .Pricing_sec {
+    padding: 50px 20px;
+  }
+
+  .Banner_sec .leftside, 
+  .Banner_sec .rightside {
+    text-align: center;
+  }
+
+  .about-img {
+    max-width: 90%;
+  }
+
+  .Tabside ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Tabside .tabLink {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .Footer_sec {
+    padding: 30px 20px;
+  }
+}

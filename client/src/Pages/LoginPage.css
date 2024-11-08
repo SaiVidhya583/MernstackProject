@@ -1,0 +1,126 @@
+:root {
+  --primary-color: #FFA500;
+  --secondary-color: #333;
+  --background-color: #f0f0f0;
+  --text-color: #fff;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --form-bg-color: rgba(255, 255, 255, 0.8);
+  --form-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  --input-bg-color: var(--background-color);
+  --input-focus-bg-color: #e0e0e0;
+  --input-focus-shadow: 0px 0px 3px 3px #d0d0d0;
+  --button-bg-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
+  --button-hover-bg: #2575fc;
+  --no-account-bg-color: red;
+  --register-bg-color: rgb(9, 137, 67);
+  --register-hover-bg-color: #2091d8;
+}
+
+#Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background: url('https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center;
+  background-size: cover;
+  background-color: transparent !important;
+}
+
+.form {
+  padding: 2rem;
+  margin-top: -110px;
+  background: var(--form-bg-color);
+  border-radius: 1rem;
+  box-shadow: var(--form-shadow);
+  min-width: 320px;
+  position: relative;
+  color: var(--secondary-color);
+  font-family: var(--font-family);
+}
+
+.form .ant-form-item-label > label {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.no-account-text {
+  color: var(--no-account-bg-color);
+  font-weight: 200;
+}
+
+#login-label {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-content {
+  height: 2.5rem;
+  padding: 0.5rem;
+  color: var(--secondary-color);
+  background: var(--input-bg-color);
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+::placeholder {
+  color: #aaa;
+  font-weight: 400;
+}
+
+.form-content:focus-visible {
+  outline: none;
+  background: var(--input-focus-bg-color);
+  box-shadow: var(--input-focus-shadow);
+}
+
+.form-content:hover {
+  background: var(--input-focus-bg-color);
+}
+
+.login-button {
+  cursor: pointer;
+  height: 2.5rem;
+  padding: 0 1rem;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  background: var(--button-bg-gradient);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button:hover {
+  background: var(--button-hover-bg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.no-account-bg {
+  background-color: var(--no-account-bg-color);
+  color: var(--text-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+.register-bg {
+  background-color: var(--register-bg-color);
+  color: var(--text-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-bg:hover {
+  background-color: var(--register-hover-bg-color);
+}
